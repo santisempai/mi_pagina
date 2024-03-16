@@ -1,0 +1,258 @@
+/* importamos la fuente de google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* todos los elemetos */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'sans-serif';
+}
+
+body{
+    background-color: #070F2B;
+    color: #ededed;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    /* border-bottom: solid 1px #35374B; */
+}
+
+/* selector de clase */
+.logo{
+    font-size: 24px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.navegacion a{
+    font-size: 20px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+}
+
+.navegacion a:hover{
+    color: #00abf0;
+}
+
+/* SECCION SOBRE MI */
+
+.sobre-mi{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.contenedor-sobre-mi{
+    max-width: 600px;
+}
+
+.contenedor-sobre-mi h1{
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.contenedor-sobre-mi h3{
+    font-size: 30px;
+    font-weight: 700;
+    color: #00abf0;
+}
+
+.contenedor-sobre-mi p{
+    font-size: 16px;
+    margin: 20px 0 40px;
+    line-height: 1.2;
+}
+
+
+.redes-sociales{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 40px;
+    width: 200px;
+}
+
+.redes-sociales a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: 2px solid #00abf0;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #00abf0;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.redes-sociales a:hover{
+    color: #070F2B;
+}
+
+.redes-sociales a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #00abf0;
+    z-index: -1;
+    transition: .5s;
+}
+
+.redes-sociales a:hover::before{
+    width: 100%;
+}
+
+.img-contenedor{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #050507;
+    width: 100%;
+    border-radius: 50%;
+   margin-left: 120px;
+   overflow: hidden; 
+}
+
+.img-contenedor img{
+    width: 80%;
+}
+
+/* SECCION HABILIDADES */
+
+.habilidades{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #535C91;
+    height: 100vh;
+    padding: 0 10%;
+}
+
+/* SECCION PROYECTOS */
+
+.proyectos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #070F2B;
+    height: 100vh;
+    padding: 0 10%;
+}
+
+/* FOOTER */
+footer {
+    background-color: #535C91;
+    color: #ededed;
+    padding: 40px 10%;
+    font-size: 16px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    color: #ededed;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #00abf0;
+}
+
+.footer-redes-sociales a {
+    display: inline-block;
+    margin-right: 10px;
+    color: #ededed;
+    text-decoration: none;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.footer-redes-sociales a:hover {
+    color: #00abf0;
+}
+
+.footer-derechos {
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+/* Responsive desing */
+@media(max-width: 900px){
+
+    .navegacion{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sobre-mi{
+        display: flex;
+        flex-direction: column-reverse; 
+        justify-content: flex-end;
+        margin: 5% 10%;
+    }
+
+    .img-contenedor{
+        margin-top: 45%;
+        margin-left: 0;
+    }
+
+    .redes-sociales{
+        position: static;
+        margin-top: 5px;
+    }
+
+    .img-contenedor img{
+        width: 50%;
+    }
+
+    .footer-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-links,
+    .footer-redes-sociales {
+    margin-top: 10px;
+}
+}
